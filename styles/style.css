@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", serif;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .header-mobile {
+        background-color: #000;
+        padding: 20px;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: white;
+        transition: transform 0.3s ease, top 0.3s ease;
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburger span:first-child {
+        top: 10px;
+    }
+
+    .hamburger span:last-child {
+        bottom: 5px;
+    }
+
+    .hamburger.active span:first-child {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .hamburger.active span:last-child {
+        transform: rotate(-45deg);
+        bottom: 50%;
+    }
+
+    .mobile-navbar {
+        display: block;
+        position: absolute;
+        top: 80px; /* Ajuste conforme o tamanho do seu cabeçalho */
+        left: 0;
+        width: 100%;
+        max-height: 0; /* Começa invisível */
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        padding: 0; /* Remove padding inicial */
+    }
+    
+    .mobile-navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .mobile-navbar li {
+        font-size: 24px;
+        margin: 30px 0;
+        padding-left: 5%;
+        font-family: "Rubik", serif;
+    }
+    
+    /* Quando ativo, expande suavemente */
+    .mobile-navbar.active {
+        max-height: 100vh; /* Ajuste conforme necessário */
+        padding: 20px 0;
+    }
+    
+}
+
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 100vh;
+}
+
+.hero form h1 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.hero form p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+main div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}
+
+.hero form {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero form input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    display: block;
+    margin: 10px auto;
+    color: white;
+    outline: none;
+}
+
+.hero form textarea {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    display: block;
+    margin: 10px auto;
+    color: white;
+    outline: none;
+}
+
+.hero button {
+    background-color: #c0864f;
+    border: 0;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+    margin: 20px auto;
+    height: 50px;
+    font-size: 22px;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease; /* Animação suave */
+}
+
+.hero button:hover {
+    width: 90%; /* Aumenta o tamanho lateralmente */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+
+.hero button img {
+    width: 30px;
+    transform: rotate(-35deg);
+    transition: transform 0.3s ease; 
+}
+
+.hero button:hover img {
+    transform: rotate(0deg);
+}
