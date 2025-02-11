@@ -62,17 +62,20 @@
     .mobile-navbar {
         display: block;
         position: absolute;
-        top: 80px; /* Ajuste conforme o tamanho do seu cabeçalho */
+        top: 80px;
+        /* Ajuste conforme o tamanho do seu cabeçalho */
         left: 0;
         width: 100%;
-        max-height: 0; /* Começa invisível */
+        max-height: 0;
+        /* Começa invisível */
         overflow: hidden;
         background-color: black;
         color: white;
         transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-        padding: 0; /* Remove padding inicial */
+        padding: 0;
+        /* Remove padding inicial */
     }
-    
+
     .mobile-navbar ul {
         list-style: none;
         padding: 0;
@@ -86,13 +89,14 @@
         padding-left: 5%;
         font-family: "Rubik", serif;
     }
-    
+
     /* Quando ativo, expande suavemente */
     .mobile-navbar.active {
-        max-height: 100vh; /* Ajuste conforme necessário */
+        max-height: 100vh;
+        /* Ajuste conforme necessário */
         padding: 20px 0;
     }
-    
+
 }
 
 .hero {
@@ -164,28 +168,110 @@ main div {
     border: 0;
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 70%;
     justify-content: space-around;
     margin: 20px auto;
     height: 50px;
-    font-size: 22px;
+    font-size: 16px;
     color: white;
-    font-weight: 200;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s ease, width 0.3s ease; /* Animação suave */
+    transition: transform 0.3s ease, width 0.3s ease;
+    /* Animação suave */
 }
 
 .hero button:hover {
-    width: 90%; /* Aumenta o tamanho lateralmente */
-    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+    width: 80%;
+    /* Aumenta o tamanho lateralmente */
+    transform: scaleX(1.1);
+    /* Aumenta ligeiramente o botão */
 }
 
 .hero button img {
     width: 30px;
     transform: rotate(-35deg);
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
-.hero button:hover img {
-    transform: rotate(0deg);
+.about-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)) center center / cover no-repeat, url(../images/about-bg.jpg);
+    background-position: center center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.about-us h1 {
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 3rem;
+}
+
+.about-us img {
+    display: block;
+    margin: 0 auto;
+}
+
+.marquee-container {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.marquee-text {
+    display: inline-block;
+    text-transform: uppercase;
+    animation: marquee 15s linear infinite;
+    user-select: none;
+    line-height: 1.5em;
+    font-size: 15rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    /* Coloca o texto no fundo */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.about-info {
+    margin-top: 60px;
+}
+
+.about-info h2 {
+    font-weight: normal;
+    font-family: "Lora", serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-info p {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    line-height: 1.5;
 }
