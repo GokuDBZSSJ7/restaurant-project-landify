@@ -206,7 +206,7 @@ main div {
 
 .about-us h1 {
     color: white;
-    margin-top: 40px;
+    margin-top: 60px;
     text-align: center;
     font-family: "Lora", serif;
     font-size: 3rem;
@@ -274,4 +274,116 @@ main div {
     display: block;
     margin: 20px auto;
     line-height: 1.5;
+}
+
+.btn-about {
+    background-color: #c0864f;
+    border: 0;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 20px auto;
+    height: 50px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.btn-about img {
+    width: 30px;
+    transform: rotate(-35deg);
+    transition: transform 0.3s ease;
+}
+
+.btn-about:hover {
+    width: 80%;
+    transform: scaleX(1.1);
+}
+
+.special {
+    background-color: #000;
+}
+
+.special h1 {
+    color: white;
+    padding-top: 60px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 3rem;
+}
+
+.special img {
+    display: block;
+    margin: 0 auto;
+}
+
+.special-row {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.special-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.special-item img {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    padding: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.special-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Começa fora da tela, à direita */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(0); /* Mantém a posição inicial */
+    font-family: "Lora", serif;
+}
+
+.special-item:hover .overlay {
+    transform: translateX(-100%); /* Move a camada da direita para a esquerda */
+}
+
+.special-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.special-item p {
+    margin-top: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.special-item span {
+    position: absolute;
+    bottom: 10%;
+    margin-top: 90px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #c0864f;
+}
+
+.special-item small {
+    font-size: 16px;
+    color: #c0864f;
 }
