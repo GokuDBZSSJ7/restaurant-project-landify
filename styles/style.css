@@ -306,6 +306,7 @@ main div {
 
 .special {
     background-color: #000;
+    padding-bottom: 60px;
 }
 
 .special h1 {
@@ -387,6 +388,10 @@ main div {
 .special-item small {
     font-size: 16px;
     color: #c0864f;
+}
+
+.menu {
+    background-color: #000;
 }
 
 
