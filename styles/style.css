@@ -137,6 +137,7 @@ main div {
     flex-direction: column;
     padding: 60px 20px;
     background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
 }
 
 .hero form input {
@@ -386,4 +387,17 @@ main div {
 .special-item small {
     font-size: 16px;
     color: #c0864f;
+}
+
+
+@keyframes animatedRadius {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
 }
